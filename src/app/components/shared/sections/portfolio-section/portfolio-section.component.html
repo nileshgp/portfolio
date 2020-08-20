@@ -1,0 +1,79 @@
+<section id="{{ id }}"
+    class="portfolio-section"
+    [ngClass]="{'all': !title}">
+    <div class="container">
+        <div class="row">
+            <div *ngIf="title"
+                class="col s12 section-title">
+                <h2>{{ title }}</h2>
+            </div>
+            <div class="col s12">
+                <div class="col s12 section-content pd-0">
+                    <ul class="filter"
+                        [ngClass]="{'mgt-0 mgb-50': !title}">
+                        <li><a href="#"
+                                [ngClass]="{'active': currentFilter === 'all'}"
+                                (click)="applyFilter('all')">All</a></li>
+                        <li *ngFor="let item of filters"><a href="#"
+                                [ngClass]="{'active': currentFilter === item.filter}"
+                                (click)="applyFilter(item.filter)">{{ item.name }}</a></li>
+                    </ul>
+
+                    <ul class="portfolio-items">
+
+                        <!-- Single Portfolio -->
+                        <ng-container *ngFor="let project of projects; let i = index">
+                            <li class="portfolio-content"
+                                attr.data-groups="{{ project.group.join(',') }}">
+                                <figure class="portfolio-content__inner shadow-bg wow animated" [ngClass]="animation">
+                                    <div class="aspect aspect--4x3">
+                                        <div class="aspect__inner">
+                                            <img src="{{ project.image }}" alt="{{ project.name }}" />
+                                        </div>
+                                    </div>
+                                    <figcaption>
+                                        <div class="portfolio-intro">
+                                            <div class="portfolio-intro-category">
+                                                <p *ngFor="let category of project.category">{{ category }}</p>
+                                            </div>
+                                            <div class="portfolio-intro-title">
+                                                <a href="{{ project.link }}">{{ project.name }}</a>
+                                            </div>
+                                            <div class="portfolio-intro-image">
+                                                <a class="btn-circle waves-effect portfolio-mfp tooltipped"
+                                                    data-position="top"
+                                                    data-delay="50"
+                                                    data-tooltip="View Photo"
+                                                    (click)="openImageGallery(i)"
+                                                    href="{{ project.image }}"><span class="fa fa-picture-o"></span></a>
+                                            </div>
+                                            <div class="portfolio-intro-detail"
+                                                *ngIf="project.link && project.link != '#'">
+                                                <a class="btn-circle waves-effect tooltipped"
+                                                    data-position="top"
+                                                    data-delay="50"
+                                                    data-tooltip="View Project"
+                                                    href="{{ project.link }}"
+                                                    target="_blank"><span class="fa fa-link"></span></a>
+                                            </div>
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                        </ng-container>
+                        <!--/ Single Portfolio -->
+
+                    </ul>
+                </div>
+                <div *ngIf="max"
+                    class="col s12 portfolio-all al-center">
+                    <a routerLink="/featured-work"
+                        class="btn-circle waves-effect tooltipped"
+                        data-position="top"
+                        data-delay="50"
+                        data-tooltip="More Featured Work"><span></span><span></span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,79 @@
+<section id="blog-section"
+    class="blog-section"
+    [ngClass]="{'all': !maxPosts && posts.length}">
+    <div class="container">
+        <div class="row">
+            <div *ngIf="title"
+                class="col s12 section-title">
+                <h2>{{ title }}</h2>
+            </div>
+
+            <div class="col s12 masonry pd-0">
+
+                <!-- Single Blog -->
+                <div *ngFor="let post of posts"
+                    class="col m6 s12 mgt-20">
+                    <div class="col s12 blog-wrapper w-block shadow-bg pd-0 wow fadeIn animated">
+                        <div class="col s12 blog-img pd-0 image-bg"
+                            [ngStyle]="{'background': 'url(' + post.image + ')', 'background-position': 'center top', 'background-repeat': 'no-repeat', 'background-size': 'cover'}">
+                            <a class="blog-date waves-effect waves-light"
+                                href="javascript:void(0);">{{ post.date | date: 'longDate' }}</a>
+                        </div>
+                        <div class="col s12 blog-desc pd-30">
+                            <div class="blog-title">
+                                <a routerLink="{{ post.link }}">{{ post.title }}</a>
+                            </div>
+                            <div class="blog-data">
+                                <div class="chip mgr-10">
+                                    <img src="{{ post.author.image }}"
+                                        alt="Author">
+                                    {{ post.author.name }}
+                                </div>
+                                <div class="chip">
+                                    <span class="fa fa-comments mgr-5"></span>
+                                    <span class="disqus-comment-count"
+                                        attr.data-disqus-identifier="{{ post.disqusIdentifier }}">0 Comments</span>
+                                </div>
+                            </div>
+                            <div class="blog-content">
+                                <p [innerHTML]="post.text"></p>
+                            </div>
+                            <div class="blog-more">
+                                <a routerLink="{{ post.link }}"
+                                    class="btn-custom waves-effect mgt-10 mgb-10">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Single Blog -->
+
+            </div>
+
+            <div *ngIf="maxPosts"
+                class="col s12 blog-all al-center">
+                <a routerLink="/blog"
+                    class="btn-custom waves-effect">All Blog Posts</a>
+            </div>
+            <div *ngIf="pages.length > maxPosts"
+                class="col s12">
+                <div class="col s12 pagination mgt-60">
+                    <a class="prev page-numbers btn-circle waves-effect waves-light"
+                        routerLink="{{ paginationRoute }}/1"><span class="fa fa-angle-double-left"></span></a>
+                    <ng-container *ngFor="let page of pages">
+                        <span *ngIf="page == currentPage"
+                            aria-current="page"
+                            class="page-numbers current btn-circle waves-effect waves-light">{{ page }}</span>
+                        <a *ngIf="page != currentPage"
+                            class="page-numbers btn-circle waves-effect waves-light"
+                            routerLink="{{ paginationRoute + page }}">{{ page }}</a>
+                    </ng-container>
+                    <a class="next page-numbers btn-circle waves-effect waves-light"
+                        routerLink="{{ paginationRoute + pages.length }}"><span
+                            class="fa fa-angle-double-right"></span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<app-error-section *ngIf="!posts.length && !maxPosts"
+    [message]="'No posts available'"></app-error-section>
