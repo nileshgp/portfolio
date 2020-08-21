@@ -12,7 +12,7 @@ export class HomeService {
 	author: Author = {
 		name: 'Nilesh',
 		image: './assets/img/nilesh-avatar.png',
-		job: 'Full Stack Developer',
+		job: 'Web Developer/Designer',
 		bio:
 			'Web Designing for nearly 5 years for talented people and small businesses. <br> The past 2-3 years I have been web developing for a multinational retailer. <br> I’m quietly confident, naturally curious and perpetually working on improving my chops one developer problem at a time.',
 		// age: this.calculateAge('1991-09-10'),
