@@ -52,8 +52,17 @@
                                                 <a class="btn-circle waves-effect tooltipped"
                                                     data-position="top"
                                                     data-delay="50"
-                                                    data-tooltip="View Project"
+                                                    data-tooltip="View Github"
                                                     href="{{ project.link }}"
+                                                    target="_blank"><span class="fa fa-github"></span></a>
+                                            </div>
+                                            <div class="portfolio-intro-live"
+                                                *ngIf="project.live && project.live != '#'">
+                                                <a class="btn-circle waves-effect tooltipped"
+                                                    data-position="top"
+                                                    data-delay="50"
+                                                    data-tooltip="View Project"
+                                                    href="{{ project.live }}"
                                                     target="_blank"><span class="fa fa-link"></span></a>
                                             </div>
                                         </div>
@@ -77,3 +86,4 @@
         </div>
     </div>
 </section>
+s

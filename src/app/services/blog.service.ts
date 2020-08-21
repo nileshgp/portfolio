@@ -16,8 +16,7 @@ export class BlogService {
 			name: 'Nilesh Patel',
 			image: './assets/img/nilesh-avatar.png',
 			email: 'nileshgpatel@outlook.com',
-			bio:
-				'A full-stack developer and freelancer with a passion for thoughtful coding, collaboration, and open-source. I spend my days coding, reading mangas, watching animes or playing video games.'
+			bio: ''
 		}
 	};
 
