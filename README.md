@@ -46,4 +46,14 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
 ## Still to do
-https://ng-portfolio-98ad2.web.app
+
+<ul>
+<li>add downloadable cv</li>
+<li>add contact number</li>
+<li>add fix link for cloud canine</li>
+<li>custom domain</li>
+<li>Social Links including linkdin</li>
+<li>Add real picture of me</li>
+<li>Insert logo</li>
+<li>change background image</li>
+</ul>

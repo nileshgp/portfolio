@@ -11,27 +11,28 @@ import { Tool } from '../models/tool.model';
 export class HomeService {
 	author: Author = {
 		name: 'Nilesh',
-		image: './assets/img/nilesh-avatar.png',
+		image: './assets/img/nilesh.png',
 		job: 'Web Developer/Designer',
 		bio:
 			'Web Designing for nearly 5 years for talented people and small businesses. <br> The past 2-3 years I have been web developing for a multinational retailer. <br> I’m quietly confident, naturally curious and perpetually working on improving my chops one developer problem at a time.',
 		// age: this.calculateAge('1991-09-10'),
 		location: 'Leicester, England',
 		email: 'nileshgpatel@outlook.com',
-		website: 'https://github.com/nileshgp'
+		website: 'https://github.com/nileshpdev',
+		mobile: '+447399011663'
 	};
 
 	socials: SocialLink[] = [
-		{ icon: 'github', link: 'https://github.com/nileshgp' },
+		{ icon: 'github', link: 'https://github.com/nileshpdev' },
 		{
-			icon: 'youtube-play',
-			link: 'https://github.com/nileshgp'
+			icon: 'id-card',
+			link: 'https://github.com/nileshpdev'
 		},
-		{ icon: 'twitter', link: 'https://github.com/nileshgp' },
-		{ icon: 'facebook', link: '#' },
+		{ icon: 'instagram', link: 'https://www.instagram.com/nileshpdev/' },
+		{ icon: 'behance', link: 'https://www.behance.net/nileshpatel17' },
 		{
 			icon: 'linkedin',
-			link: 'https://github.com/nileshgp'
+			link: 'https://www.linkedin.com/in/nilesh-patel-3581a7a0/'
 		}
 	];
 

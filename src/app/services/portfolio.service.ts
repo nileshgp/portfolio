@@ -16,17 +16,9 @@ export class PortfolioService {
 
 	private projects: Project[] = [
 		{
-			name: 'Cloud Canine',
-			image: './assets/img/projects/cloudcanine.png',
-			link: 'https://github.com/nileshgp/cloudcanine',
-			live: '#',
-			category: [ 'deploy issue (important)', 'NodeJs', 'Express' ],
-			group: [ this.groups['Web apps'], this.groups['Responsive apps'] ]
-		},
-		{
 			name: 'PawPal | WoofFinders',
 			image: './assets/img/projects/pawpal.png',
-			link: 'https://github.com/nileshgp/pawpal',
+			link: 'https://github.com/nileshpdev/pawpal',
 			live: 'https://pawpal-a7046.web.app',
 			category: [ 'Javascript', 'React' ],
 			group: [ this.groups['Web apps'], this.groups['Responsive apps'] ]
@@ -34,7 +26,7 @@ export class PortfolioService {
 		{
 			name: 'Nilesh Portfolio',
 			image: './assets/img/projects/portfolio.png',
-			link: 'https://github.com/nileshgp/portfolio',
+			link: 'https://github.com/nileshpdev/portfolio',
 			live: 'https://ng-portfolio-98ad2.web.app',
 			category: [ 'Typescript', 'Angular' ],
 			group: [ this.groups['Web apps'], this.groups['Responsive apps'] ]
@@ -42,15 +34,23 @@ export class PortfolioService {
 		{
 			name: 'Cov19 Near Me',
 			image: './assets/img/projects/cov19-near-me.png',
-			link: 'https://github.com/nileshgp/cov19nearme',
+			link: 'https://github.com/nileshpdev/cov19nearme',
 			live: 'https://cov19nearme.web.app',
 			category: [ 'Javascript', 'React' ],
 			group: [ this.groups['Web apps'] ]
 		},
 		{
+			name: 'Cloud Canine',
+			image: './assets/img/projects/cloudcanine.png',
+			link: 'https://github.com/nileshpdev/cloudcanine',
+			live: 'https://mighty-mesa-84652.herokuapp.com/',
+			category: [ 'Javascript', 'Mongo', 'Express', 'Heroku (so maybe slow)' ],
+			group: [ this.groups['Web apps'], this.groups['Responsive apps'] ]
+		},
+		{
 			name: 'Nextflix',
 			image: './assets/img/projects/nextflix.png',
-			link: 'https://github.com/nileshgp/nextflix',
+			link: 'https://github.com/nileshpdev/nextflix',
 			live: 'https://nextflix-354ef.web.app/',
 			category: [ 'Javascript', 'React' ],
 			group: [ this.groups['Web apps'], this.groups['Responsive apps'] ]
@@ -58,7 +58,7 @@ export class PortfolioService {
 		{
 			name: 'School City',
 			image: './assets/img/projects/school-city.png',
-			link: 'https://github.com/nileshgp/school-city',
+			link: 'https://github.com/nileshpdev/school-city',
 			live: 'https://education-city-907b4.web.app',
 			category: [ 'Typescript', 'Angular' ],
 			group: [ this.groups['Tests sites'], this.groups['Web apps'] ]
@@ -74,41 +74,41 @@ export class PortfolioService {
 		{
 			name: 'Circles',
 			image: './assets/img/projects/circles.jpg',
-			link: 'https://github.com/nileshgp/nileshgp.github.io',
-			live: 'https://nileshgp.github.io/circles/',
+			link: 'https://github.com/nileshpdev/nileshpdev.github.io',
+			live: 'https://nileshpdev.github.io/circles/',
 			category: [ 'HTML', 'CSS', 'JS' ],
 			group: [ this.groups['Static sites'] ]
 		},
 		{
 			name: 'Icon Barbershop',
 			image: './assets/img/projects/icon-barber.png',
-			link: 'https://github.com/nileshgp/nileshgp.github.io',
-			live: 'https://nileshgp.github.io/icon-barber/',
+			link: 'https://github.com/nileshpdev/nileshpdev.github.io',
+			live: 'https://nileshpdev.github.io/icon-barber/',
 			category: [ 'HTML', 'CSS' ],
 			group: [ this.groups['Static sites'], this.groups['Responsive apps'] ]
 		},
 		{
 			name: 'Museum of Sweets',
 			image: './assets/img/projects/museum-of-sweets.png',
-			link: 'https://github.com/nileshgp/nileshgp.github.io',
-			live: 'https://nileshgp.github.io/museum-of-sweets/',
+			link: 'https://github.com/nileshpdev/nileshpdev.github.io',
+			live: 'https://nileshpdev.github.io/museum-of-sweets/',
 			category: [ 'HTML', 'CSS' ],
 			group: [ this.groups['Static sites'], this.groups['Responsive apps'] ]
 		},
 		{
 			name: 'Hipster Photography Site',
 			image: './assets/img/projects/photography-site.png',
-			link: 'https://github.com/nileshgp/nileshgp.github.io',
-			live: 'https://nileshgp.github.io/photography-site/',
+			link: 'https://github.com/nileshpdev/nileshpdev.github.io',
+			live: 'https://nileshpdev.github.io/photography-site/',
 			category: [ 'HTML', 'CSS' ],
 			group: [ this.groups['Static sites'], this.groups['Responsive apps'] ]
 		},
 		{
 			name: 'AirCamp',
 			image: './assets/img/projects/aircamp.png',
-			link: 'https://github.com/nileshgp/AirCamp',
+			link: 'https://github.com/nileshpdev/AirCamp',
 			live: 'https://whispering-garden-41522.herokuapp.com/',
-			category: [ 'NodeJs', 'Express', 'EJS' ],
+			category: [ 'NodeJs', 'Express', 'EJS', 'Heroku (so maybe slow)' ],
 			group: [ this.groups['Web apps'], this.groups['Responsive apps'] ]
 		},
 		{

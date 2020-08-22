@@ -77,6 +77,6 @@ export class BlogService {
 }
 
 export const DisqusConfig = {
-	//url: 'https://github.com/nileshgp',
+	//url: 'https://github.com/nileshpdev',
 	shortname: 'Nilesh'
 };
